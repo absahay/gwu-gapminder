@@ -13,3 +13,7 @@ View(life_exp_continent <- gapminder %>%
        group_by(continent) %>% 
        summarise (mean_life = mean(lifeExp)))
 
+View(life_exp_canada <- gapminder %>% 
+  filter(country=="Canada") %>%
+  select(year, lifeExp))
+  
