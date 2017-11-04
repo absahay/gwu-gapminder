@@ -23,3 +23,12 @@ View(gdp_continent_1972 <- gapminder %>%
        filter(year == 1972) %>% 
        group_by(continent) %>% 
        summarise(mean_gdp = mean(gdpPercap)))
+
+## now we have synced R with GitHub 
+
+## get pop_size through time for China 
+
+View(pop_size_china <- gapminder %>% 
+  filter(country == "China") %>%
+  select(year, pop))
+
