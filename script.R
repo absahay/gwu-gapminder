@@ -26,9 +26,17 @@ View(gdp_continent_1972 <- gapminder %>%
 
 ## now we have synced R with GitHub 
 
-## get pop_size through time for China 
+## get pop_size through time for China and commit using R interface 
 
 View(pop_size_china <- gapminder %>% 
   filter(country == "China") %>%
   select(year, pop))
+
+## get max pop size per continent for year 2007 
+
+View(pop_size_max_2007 <- gapminder %>%
+       filter(year == 2007) %>% 
+       group_by(continent) %>% 
+       summarise(max_pop = max(pop)) %>% 
+       select(continent, max_pop))
 
